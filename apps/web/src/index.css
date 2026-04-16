@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Nadeel Luxury Palette */
+    --black: 0 0% 10%;
+    --cream: 30 33% 95%;
+    --rose-gold: 30 30% 64%;
+    --rose-light: 30 40% 82%;
+    --rose-dark: 30 28% 48%;
+    --gold: 35 28% 57%;
+    --gold-light: 35 35% 71%;
+    --charcoal: 30 4% 17%;
+    --muted-color: 30 8% 46%;
+
+    /* Semantic Tokens */
+    --background: 30 50% 98%;
+    --foreground: 30 4% 17%;
+    --card: 30 33% 95%;
+    --card-foreground: 30 4% 17%;
+    --popover: 30 50% 98%;
+    --popover-foreground: 30 4% 17%;
+    --primary: 30 30% 64%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 30 40% 82%;
+    --secondary-foreground: 30 4% 17%;
+    --muted: 30 33% 95%;
+    --muted-foreground: 30 8% 46%;
+    --accent: 35 28% 57%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 30 30% 64%;
+    --radius: 0.5rem;
+
+    /* Sidebar */
+    --sidebar-background: 30 33% 95%;
+    --sidebar-foreground: 30 4% 17%;
+    --sidebar-primary: 30 30% 64%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 30 40% 82%;
+    --sidebar-accent-foreground: 30 4% 17%;
+    --sidebar-border: 30 20% 88%;
+    --sidebar-ring: 30 30% 64%;
+  }
+
+  .dark {
+    --background: 30 4% 17%;
+    --foreground: 30 50% 98%;
+    --card: 0 0% 10%;
+    --card-foreground: 30 50% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 30 50% 98%;
+    --primary: 30 30% 64%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 30 28% 48%;
+    --secondary-foreground: 30 50% 98%;
+    --muted: 30 4% 25%;
+    --muted-foreground: 30 8% 60%;
+    --accent: 35 28% 57%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 10% 25%;
+    --input: 30 10% 25%;
+    --ring: 30 30% 64%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 30 50% 98%;
+    --sidebar-primary: 30 30% 64%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 30 4% 25%;
+    --sidebar-accent-foreground: 30 50% 98%;
+    --sidebar-border: 30 10% 25%;
+    --sidebar-ring: 30 30% 64%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .luxury-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .luxury-shadow-lg {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .luxury-spacing {
+    @apply py-20 md:py-24 lg:py-32;
+  }
+
+  .luxury-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
